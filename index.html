@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Showcase</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Anonymous+Pro" type="text/css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="sec-title">
+            <div class="title">TinyJets.io</div>
+        </div>
+        <div class="sec-div1">
+            <div class="libox">
+                <div class="li1" onclick="darkMode()">
+                    <text class="lihead">Dark Mode.js</text>
+                    <p class="lidesc">Simple Light to Dark theme changer by simple JavaScript.
+                        In this there are to buttons, LightMode & DarkMode...
+                    </p>
+                </div>
+                <div class="li2" onclick="jiggleBox()">
+                    <text class="lihead">Jiggle Box.css</text>
+                    <p class="lidesc">Simple CSS Element to Jiggle move left & right using JavaScript.
+                        In this there are two buttons...
+                    </p>
+                </div>
+                <div class="li3" onclick="example()">
+                    <text class="lihead">Example.desc</text>
+                    <p class="lidesc">Example Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit!Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit...
+                    </p>
+                </div>
+            </div>
+            <div class="btnbox">
+                <div class="next">NEXT</div>
+                <div class="prev">PREV</div>
+                <div class="home">HOME</div>
+            </div>
+        </div>
+        <div class="sec-div2">
+            <div class="webview">
+                <iframe class="iframe" id="wv" src="" alt="Click on projects to show"></iframe>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function darkMode() {
+            document.getElementById('wv').setAttribute("src", "DarkmodeButton.html");
+        }
+        function jiggleBox() {
+            document.getElementById('wv').setAttribute("src", "ButtontransformElement.html");
+        }
+        function example() {
+            document.getElementById('wv').setAttribute("src", "");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Button Transform Element</title>
+    <style>
+        body {
+            background-color: rgb(203, 216, 228);
+        }
+
+        div,
+        button {
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            border-radius: 5px;
+            display: flex;
+            justify-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #elmnt {
+            background-image: linear-gradient(150deg, rgb(10, 10, 82)30%, rgb(31, 31, 150));
+            width: 15%;
+            min-width: 100px;
+            height: 10%;
+            min-height: 35px;
+            top: 40%;
+            font-size: 18px;
+            
+            cursor: default;
+    }
+
+        div.EMT {
+            left: 42.5%;
+            right: 42.5%;
+            position: absolute;
+            
+        }
+
+        div.EMT1 {
+            left: 42.5%;
+            right: 42.5%;
+            position: relative;
+            animation: movex 2s;    
+        }
+
+        div.EMT2 {
+            left: 42.5%;
+            right: 42.5%;
+            position: relative;
+            animation: movexx 2s;    
+        }
+        @keyframes movex {
+                0% {left: 42.5%;right: 42.5%;}
+                50% {left: 30%;right: 55%;}
+                100% {left: 42.5%;right: 42.5%;}
+            }
+        
+        @keyframes movexx {
+                0% {left: 42.5%;right: 42.5%;}
+                50% {left: 55%;right: 30%;}
+                100% {left: 42.5%;right: 42.5%;}
+            }
+
+        button.BUT {
+            background-image: linear-gradient(150deg, rgb(0, 0, 0)30%, rgb(16, 16, 17));
+            width: 10%;
+            min-width: 50px;
+            height: 5%;
+            min-height: 20px;
+            left: 37.5%;
+            right: 50%;
+            top: 60%;
+            position: absolute;
+            border-radius: 5px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        button.BUT1 {
+            background-image: linear-gradient(150deg, rgb(0, 0, 0)30%, rgb(16, 16, 17));
+            width: 10%;
+            min-width: 50px;
+            height: 5%;
+            min-height: 20px;
+            left: 52.5%;
+            right: 32.5%;
+            top: 60%;
+            position: absolute;
+            border-radius: 5px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="EMT" name="Element" id="elmnt">ELEMENT</div>
+    <button class="BUT" name="Button" id="btn" type="button" onmouseover="transformx()">MOVE -X</button>
+    <button class="BUT1" name="Button" id="btn" type="button" onmouseover="transformxx()">MOVE X+</button>
+    <script>
+        function transformx() {
+            document.getElementById('elmnt').setAttribute("class", "EMT1");
+        }
+        function transformxx() {
+            document.getElementById('elmnt').setAttribute("class", "EMT2");
+        }
+    </script>
+</body>

@@ -1,0 +1,212 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dark Mode Button</title>
+    <style>
+    
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body.light {
+
+            background: rgb(134, 147, 171);
+            background: linear-gradient(256deg, rgba(134, 147, 171, 1) 0%, rgba(189, 212, 231, 1) 64%);
+        }
+
+        body.dark {
+
+            background: rgb(26, 26, 26);
+            background: linear-gradient(256deg, rgba(26, 26, 26) 0%, rgb(24, 23, 23) 64%);
+            animation: darkBody 2s;
+        }
+
+        div.bigbox {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-rows: 75% 25%;
+        }
+
+        .sec-elmnt {
+            display: grid;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 20% 60% 20%;
+        }
+
+        #elmnt {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 10px;
+            cursor: default;
+        }
+
+        div.EMT {
+            background: rgb(214, 214, 224);
+        }
+
+        div.EMT1 {
+            background: rgb(51, 51, 51);
+            animation: darkElement 2s;
+        }
+
+        .sec-btn {
+            display: grid;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-template-columns: 25% 10% 12% 6% 12% 10% 25%;
+            grid-template-rows: 20% 80%;
+        }
+
+        #btn,
+        #btn1 {
+
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        #btn {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            font-size: 11px;
+        }
+
+        #btn1 {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            font-size: 11px;
+        }
+
+        .BUT1 {
+            background: rgb(19, 19, 19);
+            color: aliceblue;
+        }
+
+        .BUT2 {
+            background: rgb(150, 148, 148);
+            color: rgb(15, 15, 15);
+            animation: darkButton 1s;
+        }
+
+        #par {
+            font-size: 1.5rem;
+        }
+
+        .PARA {
+            color: black;
+        }
+
+        .PARA1 {
+            color: aliceblue;
+            animation: darkPara 1s;
+        }
+        
+
+        @keyframes darkButton {
+            0% {
+                background: rgb(19, 19, 19);
+                color: aliceblue;
+            }
+
+            100% {
+                background: rgb(150, 148, 148);
+                color: rgb(15, 15, 15);
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .sec-elmnt {
+            display: grid;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 20% 70% 0%;
+        }
+
+        .sec-btn {
+            display: grid;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-template-columns: 17% 10% 20% 6% 20% 10% 17%;
+            grid-template-rows: 40% 60%;
+        }
+    }
+    @media screen and (max-width: 360px) {
+            .sec-elmnt {
+            display: grid;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 20% 70% 0%;
+        }
+
+        .sec-btn {
+            display: grid;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-template-columns: 17% 10% 20% 6% 20% 10% 17%;
+            grid-template-rows: 40% 60%;
+        }
+        #par {
+            font-size: 0.5rem;
+        }
+        #btn {
+            font-size: 6px;
+        }
+
+        #btn1 {
+            font-size: 6px;
+        }
+    }
+        
+    </style>
+
+<body class="light" id="body">
+    <div class="bigbox">
+        <div class="sec-elmnt">
+            <div class="EMT" name="Element" id="elmnt">
+                <p class="PARA" name="paragraph" id="par">
+                    Hey Buddy, Too Bright? <br>
+                    Wanna see my Dark side?<br>
+                    Hit the button Babe!
+                </p>
+            </div>
+        </div>
+        <div class="sec-btn">
+            <button class="BUT1" name="Button" id="btn" type="button" onclick="switchDark()">DARK MODE</button>
+            <button class="BUT1" name="Button" id="btn1" type="button" onclick="switchLight()">LIGHT MODE</button>
+        </div>
+
+        <script>
+            function switchDark() {
+                document.getElementById('body').setAttribute("class", "dark");
+                document.getElementById('btn').setAttribute("class", "BUT2");
+                document.getElementById('btn1').setAttribute("class", "BUT2");
+                document.getElementById('elmnt').setAttribute("class", "EMT1");
+                document.getElementById('par').setAttribute("class", "PARA1");
+                document.getElementById('par').innerHTML = 'Oops.., <br>Cant See? Calling Mama?<br>Switch on!';
+            }
+            function switchLight() {
+                document.getElementById('body').setAttribute("class", "light");
+                document.getElementById('btn').setAttribute("class", "BUT1");
+                document.getElementById('btn1').setAttribute("class", "BUT1");
+                document.getElementById('elmnt').setAttribute("class", "EMT");
+                document.getElementById('par').setAttribute("class", "PARA");
+                document.getElementById('par').innerHTML = 'Hey Buddy, Too Bright? <br> Wanna see my Dark side?<br>Hit the button Babe!';
+            }
+        </script>
+</body>
+</head>
