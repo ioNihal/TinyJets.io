@@ -2,6 +2,7 @@
 
 <head>
     <title>Button Transform Element</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             background-color: rgb(203, 216, 228);
@@ -20,58 +21,79 @@
             align-content: center;
             flex-wrap: wrap;
             justify-content: center;
+
         }
 
         #elmnt {
             background-image: linear-gradient(150deg, rgb(10, 10, 82)30%, rgb(31, 31, 150));
-            width: 15%;
-            min-width: 100px;
-            height: 10%;
-            min-height: 35px;
+            width: 10rem;
+            height: 4rem;
             top: 40%;
             font-size: 18px;
-            
             cursor: default;
-    }
+        }
 
         div.EMT {
             left: 42.5%;
             right: 42.5%;
             position: absolute;
-            
+
         }
 
         div.EMT1 {
             left: 42.5%;
             right: 42.5%;
             position: relative;
-            animation: movex 2s;    
+            animation: movex 2s;
         }
 
         div.EMT2 {
             left: 42.5%;
             right: 42.5%;
             position: relative;
-            animation: movexx 2s;    
+            animation: movexx 2s;
         }
+
         @keyframes movex {
-                0% {left: 42.5%;right: 42.5%;}
-                50% {left: 30%;right: 55%;}
-                100% {left: 42.5%;right: 42.5%;}
+            0% {
+                left: 42.5%;
+                right: 42.5%;
             }
-        
+
+            50% {
+                left: 30%;
+                right: 55%;
+            }
+
+            100% {
+                left: 42.5%;
+                right: 42.5%;
+            }
+        }
+
         @keyframes movexx {
-                0% {left: 42.5%;right: 42.5%;}
-                50% {left: 55%;right: 30%;}
-                100% {left: 42.5%;right: 42.5%;}
+            0% {
+                left: 42.5%;
+                right: 42.5%;
             }
+
+            50% {
+                left: 55%;
+                right: 30%;
+            }
+
+            100% {
+                left: 42.5%;
+                right: 42.5%;
+            }
+        }
 
         button.BUT {
             background-image: linear-gradient(150deg, rgb(0, 0, 0)30%, rgb(16, 16, 17));
             width: 10%;
-            min-width: 50px;
+
             height: 5%;
-            min-height: 20px;
+
             left: 37.5%;
             right: 50%;
             top: 60%;
@@ -80,12 +102,13 @@
             font-size: 10px;
             cursor: pointer;
         }
+
         button.BUT1 {
             background-image: linear-gradient(150deg, rgb(0, 0, 0)30%, rgb(16, 16, 17));
             width: 10%;
-            min-width: 50px;
+
             height: 5%;
-            min-height: 20px;
+
             left: 52.5%;
             right: 32.5%;
             top: 60%;
@@ -93,6 +116,32 @@
             border-radius: 5px;
             font-size: 10px;
             cursor: pointer;
+        }
+
+        @media screen and (max-width: 550px) {
+            #elmnt {
+                width: 8rem;
+                height: 3rem;
+            }
+
+            button.BUT {
+                width: 15%;
+                height: 10%;
+            }
+
+            button.BUT1 {
+                width: 15%;
+                height: 10%;
+            }
+        }
+        
+
+        @media screen and (max-width: 360px) {
+            #elmnt {
+                width: 7rem;
+                height: 4rem;
+            }
+
         }
     </style>
 </head>
