@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Showcase</title>
+    <title>TinyJets.io</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css">
@@ -39,7 +39,7 @@
             <div class="btnbox">
                 <div class="next">NEXT</div>
                 <div class="prev">PREV</div>
-                <div class="home">HOME</div>
+                <div class="home" onclick="rHome()">HOME</div>
             </div>
         </div>
         <div class="sec-div2">
@@ -58,6 +58,10 @@
         }
         function example() {
             document.getElementById('wv').setAttribute("src", "");
+        }
+
+        function rHome() {
+            location.href="home.html"
         }
 
     </script>
