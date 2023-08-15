@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <!--Just to check public github-->
+
 <body>
     <div class="bigbox">
         <div class="sec-title">
@@ -16,19 +17,19 @@
         </div>
         <div class="sec-div1">
             <div class="libox">
-                <div class="li1" onclick="darkMode()">
+                <div class="list-box" onclick="darkMode()">
                     <text class="lihead">Dark Mode.js</text>
                     <p class="lidesc">Simple Light to Dark theme changer by simple JavaScript.
                         In this there are to buttons, LightMode & DarkMode...
                     </p>
                 </div>
-                <div class="li2" onclick="jiggleBox()">
+                <div class="list-box hidden" onclick="jiggleBox()">
                     <text class="lihead">Jiggle Box.css</text>
                     <p class="lidesc">Simple CSS Element to Jiggle move left & right using JavaScript.
                         In this there are two buttons...
                     </p>
                 </div>
-                <div class="li3" onclick="example()">
+                <div class="list-box hidden" onclick="example()">
                     <text class="lihead">Example.desc</text>
                     <p class="lidesc">Example Lorem ipsum dolor sit amet
                         consectetur adipisicing elit!Lorem ipsum dolor sit amet
@@ -37,8 +38,8 @@
                 </div>
             </div>
             <div class="btnbox">
-                <div class="next">NEXT</div>
-                <div class="prev">PREV</div>
+                <div class="next" id="bnext">NEXT</div>
+                <div class="prev" id="bprev">PREV</div>
                 <div class="home" onclick="rHome()">HOME</div>
             </div>
         </div>
@@ -63,6 +64,54 @@
         function rHome() {
             location.href = "home.html"
         }
+
+        let currentSet = 0;
+        const totalSets = 3;
+
+        // Function to show a specific set of lists
+        function showSet(set) {
+            const allSets = document.querySelectorAll('.list-box');
+            allSets.forEach((setElement, index) => {
+                if (index === set) {
+                    setElement.classList.remove('hidden');
+                } else {
+                    setElement.classList.add('hidden');
+                }
+            });
+
+            currentSet = set;
+
+            // Show or hide the "Previous" and "Next" buttons based on the current set
+            const previousButton = document.getElementById('bprev');
+            const nextButton = document.getElementById('bnext');
+            previousButton.style.display = currentSet === 0 ? 'none': 'block';
+            nextButton.style.display = currentSet === totalSets - 1 ? 'none': 'block';
+        }
+
+        // Function to handle "Previous" button click
+        function onPreviousClick() {
+            if (currentSet > 0) {
+                showSet(currentSet - 1);
+            }
+        }
+
+        // Function to handle "Next" button click
+        function onNextClick() {
+            if (currentSet < totalSets - 1) {
+                showSet(currentSet + 1);
+            }
+        }
+
+
+        // Add event listeners to the "Previous" and "Next" buttons
+        const previousButton = document.getElementById('bprev');
+        previousButton.addEventListener('click', onPreviousClick);
+
+        const nextButton = document.getElementById('bnext');
+        nextButton.addEventListener('click', onNextClick);
+
+        // Initially show the first set of buttons
+        showSet(0);
 
     </script>
 </body>
