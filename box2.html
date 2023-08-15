@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Sets Swapping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .box-container {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .box-set {
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid black;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #previous-button, #next-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <!-- First set of buttons -->
+        <div class="box-set">
+            <button class="box" id="box1">Button 1</button>
+            <button class="box" id="box2">Button 2</button>
+            <button class="box" id="box3">Button 3</button>
+        </div>
+
+        <!-- Second set of buttons (Initially hidden) -->
+        <div class="box-set hidden">
+            <button class="box" id="box4">Button 4</button>
+            <button class="box" id="box5">Button 5</button>
+            <button class="box" id="box6">Button 6</button>
+        </div>
+
+        <!-- Third set of buttons (Initially hidden) -->
+        <div class="box-set hidden">
+            <button class="box" id="box7">Button 7</button>
+            <button class="box" id="box8">Button 8</button>
+            <button class="box" id="box9">Button 9</button>
+        </div>
+    </div>
+
+    <button id="previous-button">Previous</button>
+    <button id="next-button">Next</button>
+
+    <script>
+        let currentSet = 0;
+        const totalSets = 3;
+
+        // Function to show a specific set of buttons
+        function showSet(set) {
+            const allSets = document.querySelectorAll('.box-set');
+            allSets.forEach((setElement, index) => {
+                if (index === set) {
+                    setElement.classList.remove('hidden');
+                } else {
+                    setElement.classList.add('hidden');
+                }
+            });
+
+            currentSet = set;
+
+            // Show or hide the "Previous" and "Next" buttons based on the current set
+            const previousButton = document.getElementById('previous-button');
+            const nextButton = document.getElementById('next-button');
+            previousButton.style.display = currentSet === 0 ? 'none': 'block';
+            nextButton.style.display = currentSet === totalSets - 1 ? 'none': 'block';
+        }
+
+        // Function to handle "Previous" button click
+        function onPreviousClick() {
+            if (currentSet > 0) {
+                showSet(currentSet - 1);
+            }
+        }
+
+        // Function to handle "Next" button click
+        function onNextClick() {
+            if (currentSet < totalSets - 1) {
+                showSet(currentSet + 1);
+            }
+        }
+
+        // Function to handle button click
+        function onButtonClick(event) {
+            const buttonId = event.target.id;
+            // Replace this with your desired functionality for each button
+            console.log("Button clicked: " + buttonId);
+        }
+
+        // Add click event listeners to buttons
+        const buttons = document.querySelectorAll('.box');
+        buttons.forEach(button => {
+            button.addEventListener('click', onButtonClick);
+        });
+
+        // Add event listeners to the "Previous" and "Next" buttons
+        const previousButton = document.getElementById('previous-button');
+        previousButton.addEventListener('click', onPreviousClick);
+
+        const nextButton = document.getElementById('next-button');
+        nextButton.addEventListener('click', onNextClick);
+
+        // Initially show the first set of buttons
+        showSet(0);
+    </script>
+</body>
+</html>
