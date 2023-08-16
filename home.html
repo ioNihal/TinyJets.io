@@ -1,62 +1,162 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
-    <title>Home -TinyJets.io</title>
-    <script type="text/javascript"
-        src="http://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Aglrv_3_7L-wg8UtcJL_CpBJYwr9ffb1IlFotE3dZb878DMn0K4VgBoPlBEcEoRVXet7dGdUD4KaIFNXLj3SJw"
-        charset="UTF-8"></script>
-    <script type="text/javascript"
-        src="http://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=q0wSK0RrBF0XMLYL1L3WEh0RoGdZJqfFarFdlapulKYUQNMmQ1NZs5UGxT5XnfCumFPCj-hKBEKRXs-k4ase_w"
-        charset="UTF-8"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>HOME-TinyJets.io</title>
     <style>
+        body,
+        h1,
+        p {
+            margin: 0;
+            padding: 0;
+        }
         body {
-            background-color: rgb(8, 8, 8);
-            font-family: "JetBrains mono";
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
         }
 
-        .bgtext {
-            color: white;
-            font-size: 20rem;
-            opacity: 4%;
-            z-index: 1;
-        }
-
-        .hmtext {
-            color: white;
-            z-index: 2;
-            font-size: 5em;
-            position: absolute;
+        .landing-page {
             text-align: center;
-            top: 37%;
-
-
+            padding: 100px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
         }
 
-        .gsbtn {
-            color: white;
-            z-index: 2;
-            position: absolute;
-            top: 55%;
-            left: 45%;
-            height: 5%;
-            width: 10%;
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: "JetBrains mono";
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 0.5s;
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 1s;
+        }
+
+        .gstart {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 1.5s;
+        }
+
+        .gstart:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .graphic {
             display: flex;
-            align-items: center;
             justify-content: center;
-            background-color: rgb(63, 83, 83);
-            border: 20px;
-            border-color: beige;
+            align-items: center;
+            margin-top: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 2s;
+        }
+
+        .graphic img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /* Responsive styles for smaller screens */
+            .landing-page {
+                padding: 80px 10px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .get-started-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            padding: 20px;
+        }
+
+        .nav-bar a {
+            margin: 0 10px;
+        }
+
+        .nav-bar img {
+            width: 30px;
+            height: 30px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-bar img:hover {
+            opacity: 1;
         }
     </style>
 </head>
 
 <body>
-    <text class="bgtext" id="bgtxt1">TinyJets.io</text>
-    <text class="bgtext" id="bgtxt2">TinyJets.io</text>
-    <text class="hmtext" id="hmtxt">TinyJets.io</text>
-    <div class="gsbtn" id="getsbtn">GET STARTED</div>
+    <div class="landing-page">
+        <h1>Ready For Launch?</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga accusantium tempore quis, odio quod beatae accusamus magni corrupti ad alias molestias doloremque natus ratione exercitationem optio aliquam architecto consequuntur dolore?
+        </p>
+        <button class="gstart" id="gsbtn">Get Started</button>
+    </div>
 
+    <div class="nav-bar">
+        <a href="#"><img src="" alt="Instagram"></a>
+        <a href="#"><img src="" alt="Twitter"></a>
+        <a href="#"><img src="" alt="Email"></a>
+        <a href="#"><img src="" alt="GitHub"></a>
+    </div>
+    <script>
+        function rMain() {
+            location.href = "index.html"
+        }
+        const gstartButton = document.getElementById('gsbtn');
+        gstartButton.addEventListener('click', rMain);
+    </script>
 </body>
 
 </html>
