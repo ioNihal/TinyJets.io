@@ -17,24 +17,30 @@
         </div>
         <div class="sec-div1">
             <div class="libox">
-                <div class="list-box" onclick="darkMode()">
+                <div class="list-box" id="li1">
                     <text class="lihead">Dark Mode.js</text>
                     <p class="lidesc">Simple Light to Dark theme changer by simple JavaScript.
                         In this there are to buttons, LightMode & DarkMode...
                     </p>
+                    <button class="btnInList" id="pview" onclick="darkMode()">PREVIEW</button>
+                    <button class="btnInList" id="oview">OPEN</button>
                 </div>
-                <div class="list-box hidden" onclick="jiggleBox()">
+                <div class="list-box hidden" id="li2">
                     <text class="lihead">Jiggle Box.css</text>
                     <p class="lidesc">Simple CSS Element to Jiggle move left & right using JavaScript.
                         In this there are two buttons...
                     </p>
+                    <button class="btnInList" id="pview" onclick="jiggleBox()">PREVIEW</button>
+                    <button class="btnInList" id="oview">OPEN</button>
                 </div>
-                <div class="list-box hidden" onclick="example()">
+                <div class="list-box hidden" id="li3">
                     <text class="lihead">Example.desc</text>
                     <p class="lidesc">Example Lorem ipsum dolor sit amet
                         consectetur adipisicing elit!Lorem ipsum dolor sit amet
                         consectetur adipisicing elit...
                     </p>
+                    <button class="btnInList" id="pview" onclick="example()">PREVIEW</button>
+                    <button class="btnInList" id="oview">OPEN</button>
                 </div>
             </div>
             <div class="btnbox">
@@ -74,10 +80,13 @@
             allSets.forEach((setElement, index) => {
                 if (index === set) {
                     setElement.classList.remove('hidden');
+                    setElement.id="li1";
                 } else {
                     setElement.classList.add('hidden');
+                    setElement.removeAttribute("id")
                 }
             });
+
 
             currentSet = set;
 
