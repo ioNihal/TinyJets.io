@@ -39,11 +39,23 @@ div.sec-div1 {
 div.libox {
     grid-row-start: 1;
     grid-row-end: 2;
+
+    margin: auto;
+    position: relative;
+
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    align-content: space-around;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+
+    background-color: #0a1420;
+    border-radius: 4px;
+    color: #e0e1dc;
+    cursor: pointer;
+
+    width: 85%;
+    height: 70%;
 }
 
 .hidden {
@@ -51,12 +63,14 @@ div.libox {
 }
 
 .list-box {
-    background-color: #0a1420;
-    border-radius: 4px;
-    color: #e0e1dc;
-    cursor: pointer;
-    width: 70%;
-    height: 70%;
+   
+}
+#li1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-evenly;
 }
 
 
@@ -64,23 +78,37 @@ div.libox {
 .lihead {
     font-size: 1.5rem;
     line-height: 0%;
-    position: relative;
+    /*position: relative;
     top: 10%;
-    left: 3%;
+    left: 3%;*/
     font-family: 'Fira Code', monospace;
-
+    margin: 10px;
 }
 
 .lidesc {
     font-size: 16px;
-    
-    position: relative;
+    /*position: relative;
     top: 15%;
-    left: 3%;
+    left: 3%;*/
     text-align: justify;
     width: 95%;
     font-family: 'Fira Code', monospace;
 
+}
+.btnInList {
+    background-color: #ccbb5a;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 20px
+}
+
+.btnInList:hover {
+    background-color: #ccbb5a;
+    transform: scale(1.05);
 }
 
 .btnbox {
