@@ -125,9 +125,6 @@ div.libox {
 .home {
     background-color: #142131;
     border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #e0e1dc;
     font-family: "JetBrains mono";
     cursor: pointer;
@@ -136,11 +133,18 @@ div.libox {
     margin: 1rem;
 }
 
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 .next {
     grid-column-start: 2;
     grid-column-end: 3;
+    
     
 }
 
