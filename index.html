@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <!--Just to check public github-->
-
+<!--Update next prev button display-->
 <body>
     <div class="bigbox">
         <div class="sec-title">
@@ -93,6 +93,7 @@
             // Show or hide the "Previous" and "Next" buttons based on the current set
             const previousButton = document.getElementById('bprev');
             const nextButton = document.getElementById('bnext');
+            /*box --- flex*/
             previousButton.style.display = currentSet === 0 ? 'none': 'block';
             nextButton.style.display = currentSet === totalSets - 1 ? 'none': 'block';
         }
