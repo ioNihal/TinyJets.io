@@ -17,14 +17,18 @@
         }
 
         body {
+            
             background-color: #111;
             color: #fff;
             font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-rows: 80% 20%;
         }
 
         .landing-page {
+            grid-row-start: 1;
+            grid-row-end: 2;
             text-align: center;
-            padding: 100px 20px;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s forwards;
@@ -75,12 +79,14 @@
         }
 
         .nav-bar {
+            grid-row-start: 2;
+            grid-row-end: 4;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #222;
-            padding: 20px;
-            
+
+
         }
 
         .nav-bar a {
@@ -133,12 +139,12 @@
         <button class="gstart" id="gsbtn">Get Started</button>
     </div>
 
-    <div class="nav-bar">
+    <footer class="nav-bar">
         <a href="#"><img src="" alt="Instagram"></a>
         <a href="#"><img src="" alt="Twitter"></a>
         <a href="#"><img src="" alt="Email"></a>
         <a href="#"><img src="" alt="GitHub"></a>
-    </div>
+    </footer>
     <script>
         function rMain() {
             location.href = "index.html"

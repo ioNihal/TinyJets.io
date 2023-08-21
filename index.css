@@ -11,7 +11,7 @@ div.bigbox {
     grid-template-rows: 171px 463px;
 }
 
-header.sec-title {
+div.sec-title {
     background-color: #e0e1dc;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -32,7 +32,7 @@ div.sec-div1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 4;
     display: grid;
     grid-template-rows: 70% 30%;
 }
@@ -165,6 +165,8 @@ div.sec-div2 {
     background-color: #e0e1dc;
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
     display: flex;
     justify-content: center;
 }
