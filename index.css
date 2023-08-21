@@ -90,7 +90,7 @@ div.libox {
     /*position: relative;
     top: 15%;
     left: 3%;*/
-    text-align: justify;
+    text-align: center;
     width: 95%;
     font-family: 'Fira Code', monospace;
 
@@ -99,7 +99,7 @@ div.libox {
     background-color: #ccbb5a;
     color: #fff;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 24px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 6px;
