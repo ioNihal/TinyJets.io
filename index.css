@@ -133,17 +133,14 @@ div.libox {
     margin: 1rem;
 }
 
-.home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 
 .next {
     grid-column-start: 2;
     grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     
 }
@@ -151,11 +148,17 @@ div.libox {
 .prev {
     grid-column-start: 4;
     grid-column-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home {
     grid-column-start: 6;
     grid-column-end: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
