@@ -10,7 +10,7 @@ div.bigbox {
     grid-template-rows: 171px 463px;
 }
 
-div.sec-title {
+header.sec-title {
     background-color: #e0e1dc;
     grid-column-start: 1;
     grid-column-end: 3;
