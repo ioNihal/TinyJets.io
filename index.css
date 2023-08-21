@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
 }
+
 div.bigbox {
     display: grid;
     width: 100%;
@@ -62,9 +63,6 @@ div.libox {
     display: none;
 }
 
-.list-box {
-   
-}
 #li1 {
     display: flex;
     flex-wrap: wrap;
@@ -95,6 +93,7 @@ div.libox {
     font-family: 'Fira Code', monospace;
 
 }
+
 .btnInList {
     background-color: #ccbb5a;
     color: #fff;
@@ -141,8 +140,8 @@ div.libox {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+
+
 }
 
 .prev {
@@ -196,8 +195,9 @@ iframe {
         grid-row-start: 1;
         grid-row-end: 2;
     }
+
     div.title {
-    font-size: 45px
+        font-size: 45px
     }
 
     .sec-div1 {
@@ -210,7 +210,7 @@ iframe {
     }
 
     .btnbox {
-        
+
         justify-content: center;
     }
 
@@ -220,9 +220,9 @@ iframe {
         width: 5rem;
         height: 2.2rem;
         margin: 0.3rem;
-        
+
     }
-    
+
 
     div.sec-div2 {
         grid-row-start: 3;
