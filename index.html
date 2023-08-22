@@ -1,142 +1,15 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>TinyJets.io</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Anonymous+Pro" type="text/css">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=http://ionihal.github.io/TinyJets.io/home.html" />
+  <title></title>
 </head>
-<!--Just to check public github-->
-<!--Update next prev button display-->
 
 <body>
-    <div class="bigbox">
-        <div class="sec-title">
-            <div class="title">TinyJets.io</div>
-        </div>
-        <div class="sec-div1">
-            <div class="libox">
-                <div class="list-box" id="li1">
-                    <text class="lihead">Dark Mode.js</text>
-                    <p class="lidesc">Simple Light to Dark theme changer by simple JavaScript.
-                        In this there are to buttons, LightMode & DarkMode...
-                    </p>
-                    <button class="btnInList" id="pview" onclick="darkMode()">PREVIEW</button>
-                    <button class="btnInList" id="oview">OPEN</button>
-                </div>
-                <div class="list-box hidden" id="li2">
-                    <text class="lihead">Jiggle Box using css</text>
-                    <p class="lidesc">Simple CSS Element to Jiggle move left & right using JavaScript.
-                        In this there are two buttons...
-                    </p>
-                    <button class="btnInList" id="pview" onclick="jiggleBox()">PREVIEW</button>
-                    <button class="btnInList" id="oview">OPEN</button>
-                </div>
-                <div class="list-box hidden" id="li3">
-                    <text class="lihead">Snake Game using CSS and js</text>
-                    <p class="lidesc">
-                        Snake is a game in which a snake needs to explore an environment and catch the fruit without
-                        hitting any obstacle or itself. Every time the snake catches a fruit, its size increases.
-                    </p>
-                    <button class="btnInList" id="pview" onclick="snakeGame()">PREVIEW</button>
-                    <button class="btnInList" id="oview">OPEN</button>
-                </div>
-                <div class="list-box hidden" id="li4">
-                    <text class="lihead">Example.desc</text>
-                    <p class="lidesc">Example Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit!Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit...
-                    </p>
-                    <button class="btnInList" id="pview" onclick="example()">PREVIEW</button>
-                    <button class="btnInList" id="oview">OPEN</button>
-                </div>
-            </div>
-            <div class="btnbox">
-                <div class="home" onclick="rHome()">HOME</div>
-                <div class="next" id="bnext">NEXT</div>
-                <div class="prev" id="bprev">PREV</div>
-            </div>
-        </div>
-        <div class="sec-div2">
-            <div class="webview">
-                <iframe class="iframe" id="wv" src="" alt="Click on projects to show"></iframe>
 
-            </div>
-        </div>
-    </div>
-    <script>
-        function darkMode() {
-            document.getElementById('wv').setAttribute("src", "DarkmodeButton.html");
-        }
-        function jiggleBox() {
-            document.getElementById('wv').setAttribute("src", "ButtontransformElement.html");
-        }
-        function snakeGame() {
-            document.getElementById('wv').setAttribute("src", "snakeGameJs.html");
-        }
-        function example() {
-            document.getElementById('wv').setAttribute("src", "");
-        }
-
-        function rHome() {
-            location.href = "home.html"
-        }
-
-        let currentSet = 0;
-        const totalSets = 4;
-
-        // Function to show a specific set of lists
-        function showSet(set) {
-            const allSets = document.querySelectorAll('.list-box');
-            allSets.forEach((setElement, index) => {
-                if (index === set) {
-                    setElement.classList.remove('hidden');
-                    setElement.id = "li1";
-                } else {
-                    setElement.classList.add('hidden');
-                    setElement.removeAttribute("id")
-                }
-            });
-
-
-            currentSet = set;
-
-            // Show or hide the "Previous" and "Next" buttons based on the current set
-            const previousButton = document.getElementById('bprev');
-            const nextButton = document.getElementById('bnext');
-            /*box --- flex*/
-            previousButton.style.display = currentSet === 0 ? 'none' : 'flex';
-            nextButton.style.display = currentSet === totalSets - 1 ? 'none' : 'flex';
-        }
-
-        // Function to handle "Previous" button click
-        function onPreviousClick() {
-            if (currentSet > 0) {
-                showSet(currentSet - 1);
-            }
-        }
-
-        // Function to handle "Next" button click
-        function onNextClick() {
-            if (currentSet < totalSets - 1) {
-                showSet(currentSet + 1);
-            }
-        }
-
-
-        // Add event listeners to the "Previous" and "Next" buttons
-        const previousButton = document.getElementById('bprev');
-        previousButton.addEventListener('click', onPreviousClick);
-
-        const nextButton = document.getElementById('bnext');
-        nextButton.addEventListener('click', onNextClick);
-
-        // Initially show the first set of buttons
-        showSet(0);
-
-    </script>
 </body>
 
 </html>
