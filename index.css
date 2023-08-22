@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
 
 div.bigbox {
@@ -96,6 +97,7 @@ div.libox {
 
 .btnInList {
     background-color: #ccbb5a;
+    font-family: 'Fira Code';
     color: #fff;
     border: none;
     padding: 10px 24px;
@@ -125,7 +127,7 @@ div.libox {
     background-color: #142131;
     border-radius: 3px;
     color: #e0e1dc;
-    font-family: "JetBrains mono";
+    font-family: 'Fira Code';
     cursor: pointer;
     width: 5rem;
     height: 2.3rem;
