@@ -10,6 +10,7 @@
 </head>
 <!--Just to check public github-->
 <!--Update next prev button display-->
+
 <body>
     <div class="bigbox">
         <div class="sec-title">
@@ -26,7 +27,7 @@
                     <button class="btnInList" id="oview">OPEN</button>
                 </div>
                 <div class="list-box hidden" id="li2">
-                    <text class="lihead">Jiggle Box.css</text>
+                    <text class="lihead">Jiggle Box using css</text>
                     <p class="lidesc">Simple CSS Element to Jiggle move left & right using JavaScript.
                         In this there are two buttons...
                     </p>
@@ -34,6 +35,15 @@
                     <button class="btnInList" id="oview">OPEN</button>
                 </div>
                 <div class="list-box hidden" id="li3">
+                    <text class="lihead">Snake Game using CSS and js</text>
+                    <p class="lidesc">
+                        Snake is a game in which a snake needs to explore an environment and catch the fruit without
+                        hitting any obstacle or itself. Every time the snake catches a fruit, its size increases.
+                    </p>
+                    <button class="btnInList" id="pview" onclick="snakeGame()">PREVIEW</button>
+                    <button class="btnInList" id="oview">OPEN</button>
+                </div>
+                <div class="list-box hidden" id="li4">
                     <text class="lihead">Example.desc</text>
                     <p class="lidesc">Example Lorem ipsum dolor sit amet
                         consectetur adipisicing elit!Lorem ipsum dolor sit amet
@@ -63,6 +73,9 @@
         function jiggleBox() {
             document.getElementById('wv').setAttribute("src", "ButtontransformElement.html");
         }
+        function snakeGame() {
+            document.getElementById('wv').setAttribute("src", "snakeGameJs.html");
+        }
         function example() {
             document.getElementById('wv').setAttribute("src", "");
         }
@@ -72,7 +85,7 @@
         }
 
         let currentSet = 0;
-        const totalSets = 3;
+        const totalSets = 4;
 
         // Function to show a specific set of lists
         function showSet(set) {
@@ -80,7 +93,7 @@
             allSets.forEach((setElement, index) => {
                 if (index === set) {
                     setElement.classList.remove('hidden');
-                    setElement.id="li1";
+                    setElement.id = "li1";
                 } else {
                     setElement.classList.add('hidden');
                     setElement.removeAttribute("id")
@@ -94,8 +107,8 @@
             const previousButton = document.getElementById('bprev');
             const nextButton = document.getElementById('bnext');
             /*box --- flex*/
-            previousButton.style.display = currentSet === 0 ? 'none': 'flex';
-            nextButton.style.display = currentSet === totalSets - 1 ? 'none': 'flex';
+            previousButton.style.display = currentSet === 0 ? 'none' : 'flex';
+            nextButton.style.display = currentSet === totalSets - 1 ? 'none' : 'flex';
         }
 
         // Function to handle "Previous" button click
