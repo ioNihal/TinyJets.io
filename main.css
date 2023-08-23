@@ -243,3 +243,31 @@ iframe {
         font-size: 8px;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    div.bigbox {
+        width:100vh;
+        height: 100vh;
+        grid-template-rows: 20% 50% 30%;
+        grid-template-columns: 100%;
+    }  
+    div.sec-title {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    div.sec-div1 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;  
+    }
+    div.sec-div2 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
