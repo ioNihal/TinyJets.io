@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
+    background-color: #e0e1dc;
 }
 
 div.bigbox {
@@ -13,7 +14,6 @@ div.bigbox {
 }
 
 div.sec-title {
-    background-color: #e0e1dc;
     grid-column-start: 1;
     grid-column-end: 3;
     display: flex;
@@ -30,7 +30,6 @@ div.title {
 }
 
 div.sec-div1 {
-    background-color: #e0e1dc;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -164,7 +163,6 @@ div.libox {
 
 
 div.sec-div2 {
-    background-color: #e0e1dc;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
