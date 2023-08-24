@@ -43,8 +43,6 @@ div.libox {
     grid-row-end: 2;
 
     margin: auto;
-    position: relative;
-
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -78,7 +76,7 @@ div.libox {
     font-size: 1.5rem;
     line-height: 0%;
     font-family: 'Fira Code', monospace;
-    margin: 10px;
+    margin: 10px 10px;
 }
 #sgtitle {
     font-size: 1rem;
@@ -268,11 +266,11 @@ iframe {
         grid-column-start: 1;
         grid-column-end: 2;
     }
-    #sgtitle {
-        font-size: 16px;
-        margin-top: 5px;
+    .lihead  {
+        font-size: 14px;
+        margin-top: 20px
     }
-    #sgdesc {
+    lidesc {
         font-size: 8px;
     }
     .btnbox {
