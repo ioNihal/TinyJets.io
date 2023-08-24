@@ -77,9 +77,6 @@ div.libox {
 .lihead {
     font-size: 1.5rem;
     line-height: 0%;
-    /*position: relative;
-    top: 10%;
-    left: 3%;*/
     font-family: 'Fira Code', monospace;
     margin: 10px;
 }
@@ -89,9 +86,6 @@ div.libox {
 
 .lidesc {
     font-size: 14px;
-    /*position: relative;
-    top: 15%;
-    left: 3%;*/
     text-align: center;
     width: 95%;
     font-family: 'Fira Code', monospace;
