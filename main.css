@@ -268,6 +268,9 @@ iframe {
         grid-column-start: 1;
         grid-column-end: 2;
     }
+    #sgtitle {
+        font-size: 16px;
+    }
     .btnbox {
         justify-content: center;
     
