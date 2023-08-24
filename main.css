@@ -83,6 +83,9 @@ div.libox {
     font-family: 'Fira Code', monospace;
     margin: 10px;
 }
+#sgtitle {
+    font-size: 1rem;
+}
 
 .lidesc {
     font-size: 14px;
