@@ -265,8 +265,8 @@ iframe {
         grid-column-end: 2;
     }
     .lihead  {
-        font-size: 14px;
-        margin-top: 20px
+        font-size: 12px;
+        margin-top: 10px
     }
     .lidesc {
         font-size: 8px;
