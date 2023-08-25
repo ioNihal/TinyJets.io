@@ -2,10 +2,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css">
     <title>Dark Mode Button</title>
     <style>
-    
-
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -31,26 +30,26 @@
         }
 
         .sec-elmnt {
-            display: grid;
             grid-row-start: 1;
             grid-row-end: 2;
-            grid-template-columns: 25% 50% 25%;
-            grid-template-rows: 20% 60% 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
+
         #elmnt {
-            grid-column-start: 2;
-            grid-column-end: 3;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: center;
-            align-items: center;
+            height: 40%;
             border-radius: 5px;
             box-shadow: 10px;
             cursor: default;
+        }
+
+        p {
+            margin: 20px;
+            font-size: 1.5rem;
+            font-family: 'Fira Code';
+            font-weight: 500;
         }
 
         div.EMT {
@@ -63,17 +62,24 @@
         }
 
         .sec-btn {
-            display: grid;
             grid-row-start: 2;
             grid-row-end: 3;
-            grid-template-columns: 25% 10% 12% 6% 12% 10% 25%;
-            grid-template-rows: 20% 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
         }
 
         #btn,
         #btn1 {
-
+            font-family: 'Fira Code';
+            font-weight: 500;
             border-radius: 5px;
+            height: 50px;
+            width: 110px;
+            font-size: 13px;
+            margin-bottom: 200px;
             cursor: pointer;
             border: none;
         }
@@ -81,13 +87,13 @@
         #btn {
             grid-column-start: 3;
             grid-column-end: 4;
-            font-size: 11px;
+            margin-right: 30px;
         }
 
         #btn1 {
             grid-column-start: 5;
             grid-column-end: 6;
-            font-size: 11px;
+            margin-left: 30px;
         }
 
         .BUT1 {
@@ -101,9 +107,6 @@
             animation: darkButton 1s;
         }
 
-        #par {
-            font-size: 1.5rem;
-        }
 
         .PARA {
             color: black;
@@ -113,7 +116,7 @@
             color: aliceblue;
             animation: darkPara 1s;
         }
-        
+
 
         @keyframes darkButton {
             0% {
@@ -127,51 +130,79 @@
             }
         }
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 600px) {
+            div.bigbox {
+
+                grid-template-rows: 60% 40%;
+            }
+
             .sec-elmnt {
-            display: grid;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            grid-template-columns: 20% 60% 20%;
-            grid-template-rows: 20% 70% 0%;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #elmnt {
+                height: 40%;
+                width: 75%;
+            }
+
+            p {
+                margin: 30px;
+                font-size: 1.6rem;
+                line-height: 35px;
+            }
+
+            .sec-btn {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            #btn {
+                margin-right: 0;
+            }
+
+            #btn1 {
+                margin-left: 0;
+            }
         }
 
-        .sec-btn {
-            display: grid;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            grid-template-columns: 17% 10% 20% 6% 20% 10% 17%;
-            grid-template-rows: 40% 60%;
-        }
-    }
-    @media screen and (max-width: 360px) {
+        @media screen and (max-width: 360px) {
             .sec-elmnt {
-            display: grid;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            grid-template-columns: 20% 60% 20%;
-            grid-template-rows: 20% 70% 0%;
-        }
+                display: grid;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-template-columns: 20% 60% 20%;
+                grid-template-rows: 20% 70% 0%;
+            }
 
-        .sec-btn {
-            display: grid;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            grid-template-columns: 17% 10% 20% 6% 20% 10% 17%;
-            grid-template-rows: 40% 60%;
-        }
-        #par {
-            font-size: 0.5rem;
-        }
-        #btn {
-            font-size: 6px;
-        }
+            .sec-btn {
+                display: grid;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-template-columns: 17% 10% 20% 6% 20% 10% 17%;
+                grid-template-rows: 40% 60%;
+            }
 
-        #btn1 {
-            font-size: 6px;
+            #par {
+                font-size: 0.5rem;
+            }
+
+            #btn {
+                font-size: 6px;
+            }
+
+            #btn1 {
+                font-size: 6px;
+            }
         }
-    }
-        
     </style>
 
 <body class="light" id="body">
